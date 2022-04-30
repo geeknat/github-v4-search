@@ -2,9 +2,17 @@ query Search(
     $query: String!,
     $endCursor: String,
     $startCursor: String,
-    $limit: Int = 10
+    $first: Int = 10,
+    $last: Int = 10
 ) {
-    search(type: USER, query: $query, first: $limit, after: $endCursor, before: $startCursor){
+    search(
+        type: USER,
+        query: $query,
+        first: $first,
+        last: $last,
+        after: $endCursor,
+        before: $startCursor
+    ){
         ...searchResultFields
     }
 }

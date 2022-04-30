@@ -24327,7 +24327,8 @@ export type SearchQueryVariables = Exact<{
   query: Scalars['String'];
   endCursor?: InputMaybe<Scalars['String']>;
   startCursor?: InputMaybe<Scalars['String']>;
-  limit?: InputMaybe<Scalars['Int']>;
+  first?: InputMaybe<Scalars['Int']>;
+  last?: InputMaybe<Scalars['Int']>;
 }>;
 
 
@@ -24365,11 +24366,12 @@ export const SearchResultFieldsFragmentDoc = gql`
 }
     ${UserFieldsFragmentDoc}`;
 export const SearchDocument = gql`
-    query Search($query: String!, $endCursor: String, $startCursor: String, $limit: Int = 10) {
+    query Search($query: String!, $endCursor: String, $startCursor: String, $first: Int = 10, $last: Int = 10) {
   search(
     type: USER
     query: $query
-    first: $limit
+    first: $first
+    last: $last
     after: $endCursor
     before: $startCursor
   ) {
@@ -24393,7 +24395,8 @@ export const SearchDocument = gql`
  *      query: // value for 'query'
  *      endCursor: // value for 'endCursor'
  *      startCursor: // value for 'startCursor'
- *      limit: // value for 'limit'
+ *      first: // value for 'first'
+ *      last: // value for 'last'
  *   },
  * });
  */

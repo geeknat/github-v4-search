@@ -20,7 +20,9 @@ export const Home = () => {
             variables: {
                 query: debouncedSearch,
                 endCursor: null,
-                startCursor: null
+                startCursor: null,
+                last: null,
+                first: 10,
             }
         })
     }, [debouncedSearch])
@@ -30,7 +32,9 @@ export const Home = () => {
             variables: {
                 query: debouncedSearch,
                 endCursor: data?.search?.pageInfo?.endCursor,
-                startCursor: null
+                startCursor: null,
+                last: null,
+                first: 10
             }
         })
     }, [data, debouncedSearch])
@@ -40,7 +44,9 @@ export const Home = () => {
             variables: {
                 query: debouncedSearch,
                 startCursor: data?.search?.pageInfo?.startCursor,
-                endCursor: null
+                endCursor: null,
+                first: null,
+                last: 10
             }
         })
     }, [data, debouncedSearch])
@@ -78,9 +84,9 @@ export const Home = () => {
 
                 <Container>
                     {data?.search &&
-                        <Box component={'p'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-                            {numberFormatter(data.search?.userCount)} results found
-                        </Box>
+                    <Box component={'p'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+                        {numberFormatter(data.search?.userCount)} results found
+                    </Box>
                     }
 
                     <Box mt={2} mb={2}>
