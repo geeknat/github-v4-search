@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm start-dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -29,18 +29,19 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Quick questions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### 1. Highlight something in your project that you thought was especially interesting or significant to your overall implementation.
+ - Using Github's GraphQL API was a great choice for this implementation as opposed to REST as it gives the flexibility on the data we need.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#### 2. Tell us about what you are most pleased or proud of with your implementation.
+ - Combining the power of Apollo Client & GraphQL-Codegen was a plus as it made development much easier.
+ - Apollo provided great state management for the queries out of the box
+ - GraphQL-Codegen made it easier to generate types & hooks for our queries
+ 
+#### 3. Given more time, what would the next feature or improvement you would like to add to your project?
+ - Adding a details page would be great, to showcase more information about a selected user, and leverage more of the v4 API
+ - Have a better separation of concerns for example moving the search logic to it's own hook and having components consume the hook instead
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).

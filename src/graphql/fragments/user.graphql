@@ -1,0 +1,13 @@
+fragment userFields on User{
+    databaseId
+    avatarUrl
+    bio
+    login
+    url
+    followers {
+      totalCount
+    }
+    repositories {
+      totalCount
+    }
+}

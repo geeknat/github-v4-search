@@ -1,0 +1,14 @@
+fragment searchResultFields on SearchResultItemConnection {
+    userCount
+    pageInfo {
+        hasNextPage
+        hasPreviousPage
+        endCursor
+        startCursor
+    }
+    nodes {
+        ... on User {
+            ...userFields
+        }
+    }
+}
