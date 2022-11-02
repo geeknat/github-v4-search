@@ -29,19 +29,5 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Quick questions
-
-#### 1. Highlight something in your project that you thought was especially interesting or significant to your overall implementation.
- - Using Github's GraphQL API was a great choice for this implementation as opposed to REST as it gives the flexibility on the data we need.
-
-#### 2. Tell us about what you are most pleased or proud of with your implementation.
- - Combining the power of Apollo Client & GraphQL-Codegen was a plus as it made development much easier.
- - Apollo provided great state management for the queries out of the box
- - GraphQL-Codegen made it easier to generate types & hooks for our queries
- 
-#### 3. Given more time, what would the next feature or improvement you would like to add to your project?
- - Adding a details page would be great, to showcase more information about a selected user, and leverage more of the v4 API
- - Have a better separation of concerns for example moving the search logic to it's own hook and having components consume the hook instead
-
 
 
